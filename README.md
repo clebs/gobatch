@@ -6,7 +6,7 @@ Create a `SyncRunner` to run tasks in sequence or an `AsyncRunner` to run them c
 Both `AsyncRunner` and `SyncRunner` implement the `Runner` interface, so they can be combined and nested.
 
 ## Example:
-```
+```go
 package main
 
 import (
