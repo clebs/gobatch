@@ -19,9 +19,7 @@ type AsyncRunner []Runner
 
 // Add adds a new set of Runners at the end od the Runner slice
 func (ab *AsyncRunner) Add(rs ...Runner) *AsyncRunner {
-	for _, r := range rs {
-		*ab = append(*ab, r)
-	}
+	*ab = append(*ab, rs...)
 	return ab
 }
 
@@ -53,9 +51,7 @@ type SyncRunner []Runner
 
 // Add adds a new set of Runners at the end od the Runner slice
 func (sb *SyncRunner) Add(rs ...Runner) *SyncRunner {
-	for _, r := range rs {
-		*sb = append(*sb, r)
-	}
+	*sb = append(*sb, rs...)
 	return sb
 }
 
