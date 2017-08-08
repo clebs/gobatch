@@ -17,7 +17,7 @@ type Runner interface {
 // AsyncRunner runs a set of tasks concurrently
 type AsyncRunner []Runner
 
-// Add adds a new set of Runners at the end od the Runner slice
+// Add adds a new set of Runners at the end of the Runner slice
 func (ab *AsyncRunner) Add(rs ...Runner) *AsyncRunner {
 	*ab = append(*ab, rs...)
 	return ab
@@ -49,7 +49,7 @@ func (wr WaitRunner) Run() {
 // SyncRunner runs a set of tasks in sequence
 type SyncRunner []Runner
 
-// Add adds a new set of Runners at the end od the Runner slice
+// Add adds a new set of Runners at the end of the Runner slice
 func (sb *SyncRunner) Add(rs ...Runner) *SyncRunner {
 	*sb = append(*sb, rs...)
 	return sb
